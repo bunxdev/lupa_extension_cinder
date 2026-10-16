@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cinder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <span class="brand">CINDER</span>
+    <span class="dot" aria-hidden="true"></span>
+  </header>
+
+  <main class="stats">
+    <div class="stat">
+      <span class="stat-value" id="tab-count">--</span>
+      <span class="stat-label" id="tab-label">tabs</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="window-count">--</span>
+      <span class="stat-label" id="window-label">windows</span>
+    </div>
+  </main>
+
+  <div class="actions">
+    <button class="btn btn-primary" id="export-btn" type="button">
+      Exportar a Markdown
+    </button>
+    <button class="btn btn-secondary" id="import-btn" type="button">
+      Importar Markdown
+    </button>
+  </div>
+
+  <input type="file" id="file-input" accept=".md,.markdown,text/markdown,text/plain" hidden>
+
+  <section class="preview" id="preview" hidden aria-live="polite">
+    <p class="preview-summary" id="preview-summary"></p>
+    <label class="preview-opt">
+      <input type="checkbox" id="merge-windows">
+      <span>Abrir todo en una sola ventana</span>
+    </label>
+    <div class="preview-actions">
+      <button class="btn btn-primary btn-sm" id="restore-btn" type="button">Restaurar</button>
+      <button class="btn btn-ghost btn-sm" id="cancel-import-btn" type="button">Cancelar</button>
+    </div>
+  </section>
+
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

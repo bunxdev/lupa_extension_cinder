@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Cinder",
+  "version": "0.3.2",
+  "description": "Cuenta pestañas en vivo en el badge del icono, exporta/importa a Markdown.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Cinder",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
